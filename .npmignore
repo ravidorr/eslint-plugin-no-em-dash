@@ -1,0 +1,29 @@
+# Source control
+.git/
+.github/
+
+# Development files
+tests/
+coverage/
+.husky/
+
+# Config files
+.editorconfig
+.eslintrc*
+eslint.config.js
+jest.config.js
+.prettierrc
+.nvmrc
+
+# Documentation (not needed in package)
+CONTRIBUTING.md
+CODE_OF_CONDUCT.md
+SECURITY.md
+CHANGELOG.md
+
+# IDE
+.idea/
+.vscode/
+
+# OS
+.DS_Store
