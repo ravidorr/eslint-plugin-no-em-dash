@@ -1,6 +1,7 @@
 # eslint-plugin-no-em-dash
 
 [![npm version](https://img.shields.io/npm/v/eslint-plugin-no-em-dash.svg)](https://www.npmjs.com/package/eslint-plugin-no-em-dash)
+[![CI](https://github.com/ravidorr/eslint-plugin-no-em-dash/actions/workflows/ci.yml/badge.svg)](https://github.com/ravidorr/eslint-plugin-no-em-dash/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ESLint rule to disallow em dash characters in code.
