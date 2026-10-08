@@ -15,6 +15,16 @@ This repository publishes to npm from [`.github/workflows/publish.yml`](../.gith
 
 Save the configuration. The next merged pull request that passes release checks and has an approving review will publish automatically.
 
+## Verify the setup
+
+1. Merge a release pull request with an approving review from someone other than the author.
+2. Open the **Publish** workflow run on GitHub and confirm it succeeds.
+3. Confirm npm shows the new version:
+
+```bash
+npm view eslint-plugin-no-em-dash version
+```
+
 ## What triggers a publish
 
 - The pull request is merged (not merely closed).

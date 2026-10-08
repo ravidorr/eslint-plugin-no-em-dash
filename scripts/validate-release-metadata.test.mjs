@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { readFileSync } from "node:fs";
 import test from "node:test";
 
 import {
@@ -165,6 +166,17 @@ test("validateReleaseMetadata rejects stale SECURITY.md versions", () => {
 
   assert.equal(result.valid, false);
   assert.match(result.error, /SECURITY\.md supports 1\.0\.1/);
+});
+
+test("publish workflow supports npm trusted publishing", () => {
+  const publishWorkflow = readFileSync(".github/workflows/publish.yml", "utf8");
+  const releaseWorkflow = readFileSync(".github/workflows/release-metadata.yml", "utf8");
+
+  assert.match(publishWorkflow, /id-token: write/);
+  assert.match(publishWorkflow, /registry-url: https:\/\/registry\.npmjs\.org/);
+  assert.match(publishWorkflow, /npm publish --provenance/);
+  assert.match(publishWorkflow, /check-pull-request-approval\.mjs/);
+  assert.match(releaseWorkflow, /name: Validate release metadata/);
 });
 
 test("readLockfilePackageVersion requires root and package versions to match", () => {
