@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.4] - 2026-10-08
+
+### Fixed
+- Use a trusted-publishing-compatible npm version in the publish workflow
+
 ## [1.0.3] - 2026-10-08
 
 ### Fixed
