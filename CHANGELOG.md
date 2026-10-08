@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.3] - 2026-10-08
+
+### Fixed
+- Allow repository owners to approve their own pull requests before publishing
+
 ## [1.0.2] - 2026-10-08
 
 ### Changed
