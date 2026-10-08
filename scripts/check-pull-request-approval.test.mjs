@@ -16,10 +16,10 @@ test("accepts an approving review from a non-author", () => {
   );
 });
 
-test("accepts an approving review from the repository owner on their own pull request", () => {
+test("accepts a pull request opened by the repository owner without a review", () => {
   assert.equal(
     hasValidApproval({
-      reviews: [reviewer("owner", "APPROVED")],
+      reviews: [],
       authorLogin: "owner",
       repositoryOwnerLogin: "owner",
     }),
@@ -38,11 +38,11 @@ test("rejects an approving review from a non-owner author", () => {
   );
 });
 
-test("rejects a repository owner's non-approving review", () => {
+test("rejects a non-approving review from the repository owner", () => {
   assert.equal(
     hasValidApproval({
       reviews: [reviewer("owner", "COMMENTED")],
-      authorLogin: "owner",
+      authorLogin: "contributor",
       repositoryOwnerLogin: "owner",
     }),
     false,

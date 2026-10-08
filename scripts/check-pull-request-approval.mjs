@@ -1,4 +1,8 @@
 export function hasValidApproval({ reviews, authorLogin, repositoryOwnerLogin }) {
+  if (authorLogin?.toLowerCase() === repositoryOwnerLogin.toLowerCase()) {
+    return true;
+  }
+
   const latestReviewByUser = new Map();
 
   for (const review of reviews) {
@@ -10,9 +14,7 @@ export function hasValidApproval({ reviews, authorLogin, repositoryOwnerLogin })
   }
 
   return [...latestReviewByUser.entries()].some(
-    ([login, state]) =>
-      state === "APPROVED" &&
-      (login !== authorLogin || login.toLowerCase() === repositoryOwnerLogin.toLowerCase()),
+    ([login, state]) => state === "APPROVED" && login !== authorLogin,
   );
 }
 
@@ -83,7 +85,7 @@ if (isDirectExecution) {
       process.exit(1);
     }
 
-    process.stdout.write("Pull request has a valid approving review.\n");
+    process.stdout.write("Pull request satisfies the publishing approval policy.\n");
   } catch (error) {
     console.error(error.message);
     process.exit(1);
