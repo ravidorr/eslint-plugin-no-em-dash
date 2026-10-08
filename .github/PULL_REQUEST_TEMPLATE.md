@@ -4,6 +4,18 @@ Please include a summary of the changes and the related issue.
 
 Fixes # (issue)
 
+## Release metadata
+
+Every pull request must prepare the next npm release.
+
+- [ ] Bumped `package.json` and `package-lock.json` to the exact next version
+- [ ] Added a non-empty `CHANGELOG.md` section for that version
+- [ ] Updated `SECURITY.md` so the supported version matches `package.json`
+- [ ] Applied a release label when needed:
+  - No label: patch release (default)
+  - `release:minor`: minor release
+  - `release:major`: major release
+
 ## Type of change
 
 - [ ] Bug fix (non-breaking change which fixes an issue)
