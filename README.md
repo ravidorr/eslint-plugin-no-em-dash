@@ -97,6 +97,12 @@ const message = "Hello - world";  // regular hyphen
 const template = `Status - OK`;   // regular hyphen
 ```
 
+## Releasing
+
+Pull requests must include the next version, a `CHANGELOG.md` entry, and an updated `SECURITY.md` supported version. Patch releases are the default; add the `release:minor` or `release:major` label when needed.
+
+After an approved pull request merges, GitHub Actions publishes to npm. Configure npm trusted publishing once using [docs/npm-trusted-publishing.md](docs/npm-trusted-publishing.md).
+
 ## License
 
 MIT
