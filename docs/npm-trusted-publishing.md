@@ -17,7 +17,7 @@ Save the configuration. The next merged pull request that passes release checks 
 
 ## Verify the setup
 
-1. Merge a release pull request with an approving review from someone other than the author.
+1. Merge a release pull request with an approving review. The repository owner may approve their own pull request.
 2. Open the **Publish** workflow run on GitHub and confirm it succeeds.
 3. Confirm npm shows the new version:
 
@@ -28,8 +28,8 @@ npm view eslint-plugin-no-em-dash version
 ## What triggers a publish
 
 - The pull request is merged (not merely closed).
-- The merged pull request has an approving review from someone other than the author.
+- The merged pull request has an approving review from someone other than the author, unless the author owns the repository.
 - Release metadata validation passes for the merge commit.
 - CI checks in the publish workflow pass.
 
-Owner bypass of branch protection does not bypass the approval requirement for publishing.
+The repository owner's review must use GitHub's **Approve** action. A comment, including one that says "LGTM", does not count as an approval.
