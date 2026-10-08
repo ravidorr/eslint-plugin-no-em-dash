@@ -176,6 +176,9 @@ test("publish workflow supports npm trusted publishing", () => {
   assert.match(publishWorkflow, /registry-url: https:\/\/registry\.npmjs\.org/);
   assert.match(publishWorkflow, /npm publish --provenance/);
   assert.match(publishWorkflow, /check-pull-request-approval\.mjs/);
+  assert.match(publishWorkflow, /actions\/checkout@v7/);
+  assert.match(publishWorkflow, /actions\/setup-node@v6/);
+  assert.match(publishWorkflow, /node-version: 24/);
   assert.match(releaseWorkflow, /name: Validate release metadata/);
 });
 
