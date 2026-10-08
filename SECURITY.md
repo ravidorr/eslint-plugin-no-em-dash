@@ -2,10 +2,12 @@
 
 ## Supported Versions
 
-| Version | Supported          |
-| ------- | ------------------ |
-| 1.x.x   | Yes                |
+Security fixes are provided for the latest release only.
 
+| Version | Supported |
+| ------- | --------- |
+| 1.0.0 | ✓ |
+| Earlier releases | ✘ |
 ## Reporting a Vulnerability
 
 If you discover a security vulnerability in eslint-plugin-no-em-dash, please report it responsibly.
