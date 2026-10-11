@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [1.0.11] - 2026-10-11
+
+### Changed
+
+- Bump `baseline-browser-mapping` from 2.9.13 to 2.11.28 in the npm_and_yarn dependency group.
+
 ## [1.0.10] - 2026-10-11
 
 ### Changed
