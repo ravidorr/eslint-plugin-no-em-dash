@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## [Unreleased]
+
+### Changed
+
+- Reorganize README badge rows.
+
+## [1.0.5] - 2026-10-11
+
+### Changed
+
+- Reorganize README badge rows.
+
 ## [1.0.4] - 2026-10-08
 
 ### Fixed
