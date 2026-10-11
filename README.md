@@ -11,6 +11,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![node](https://img.shields.io/node/v/eslint-plugin-no-em-dash.svg)](https://www.npmjs.com/package/eslint-plugin-no-em-dash)
 [![ESLint](https://img.shields.io/badge/ESLint->=8.0.0-4B32C3?logo=eslint)](https://eslint.org/)
+
 ESLint rule to disallow em dash characters in code.
 
 ## Requirements
