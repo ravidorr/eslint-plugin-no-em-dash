@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [1.0.10] - 2026-10-11
+
+### Changed
+
+- Bump `js-yaml` from 3.14.2 to 3.15.2 in the npm_and_yarn dependency group.
+
 ## [1.0.9] - 2026-10-11
 
 ### Changed
