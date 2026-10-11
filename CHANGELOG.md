@@ -8,6 +8,12 @@ All notable changes to this project will be documented in this file.
 
 - Reorganize README badge rows.
 
+## [1.0.6] - 2026-10-11
+
+### Changed
+
+- Use Package Phobia for install size badge instead of Bundlephobia.
+
 ## [1.0.5] - 2026-10-11
 
 ### Changed
