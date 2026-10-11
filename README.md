@@ -4,7 +4,7 @@
 [![npm downloads](https://img.shields.io/npm/dm/eslint-plugin-no-em-dash.svg)](https://www.npmjs.com/package/eslint-plugin-no-em-dash)
 [![CI](https://github.com/ravidorr/eslint-plugin-no-em-dash/actions/workflows/ci.yml/badge.svg)](https://github.com/ravidorr/eslint-plugin-no-em-dash/actions/workflows/ci.yml)
 [![codecov](https://codecov.io/gh/ravidorr/eslint-plugin-no-em-dash/branch/main/graph/badge.svg)](https://codecov.io/gh/ravidorr/eslint-plugin-no-em-dash)
-[![npm bundle size](https://img.shields.io/bundlephobia/min/eslint-plugin-no-em-dash)](https://bundlephobia.com/package/eslint-plugin-no-em-dash)
+[![install size](https://packagephobia.com/badge?p=eslint-plugin-no-em-dash)](https://packagephobia.com/result?p=eslint-plugin-no-em-dash)
 
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/ravidorr/eslint-plugin-no-em-dash/pulls)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/ravidorr/eslint-plugin-no-em-dash/graphs/commit-activity)
