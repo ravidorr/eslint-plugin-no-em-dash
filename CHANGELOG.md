@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [1.0.12] - 2026-10-11
+
+### Changed
+
+- Bump `@babel/core` from 7.28.5 to 7.29.7, `flatted` from 3.3.3 to 3.4.4, `minimatch` from 3.1.2 to 3.1.5, and `picomatch` from 2.3.1 to 2.3.2 in the npm_and_yarn dependency group.
+
 ## [1.0.11] - 2026-10-11
 
 ### Changed
