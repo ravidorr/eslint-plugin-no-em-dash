@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [1.0.8] - 2026-10-11
+
+### Changed
+
+- Bump `brace-expansion` from 1.1.12 to 1.1.21 in the npm_and_yarn dependency group.
+
 ## [1.0.7] - 2026-10-11
 
 ### Changed
