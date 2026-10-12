@@ -182,6 +182,12 @@ test("publish workflow supports npm trusted publishing", () => {
   assert.match(releaseWorkflow, /name: Validate release metadata/);
 });
 
+test("CI workflow grants the GitHub token only contents read access", () => {
+  const ciWorkflow = readFileSync(".github/workflows/ci.yml", "utf8");
+
+  assert.match(ciWorkflow, /^permissions:\n  contents: read\n\njobs:/m);
+});
+
 test("readLockfilePackageVersion requires root and package versions to match", () => {
   assert.equal(readLockfilePackageVersion(lockFor("1.0.2")), "1.0.2");
   assert.equal(

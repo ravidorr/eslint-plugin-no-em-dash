@@ -60,6 +60,11 @@
   "peerDependencies": {
     "eslint": ">=8.0.0"
   },
+  "overrides": {
+    "@istanbuljs/load-nyc-config": {
+      "js-yaml": "5.4.3"
+    }
+  },
   "engines": {
     "node": ">=18.18.0"
   },
