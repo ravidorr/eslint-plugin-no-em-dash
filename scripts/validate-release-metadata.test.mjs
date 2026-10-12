@@ -1,5 +1,8 @@
 import assert from "node:assert/strict";
-import { readFileSync } from "node:fs";
+import { mkdtempSync, readFileSync, rmSync, writeFileSync } from "node:fs";
+import { createRequire } from "node:module";
+import { tmpdir } from "node:os";
+import { join } from "node:path";
 import test from "node:test";
 
 import {
@@ -14,6 +17,8 @@ import {
 
 const basePackageJson = '{"version":"1.0.1"}';
 const supportedStatus = String.fromCodePoint(0x2713);
+const require = createRequire(import.meta.url);
+const { loadNycConfig } = require("@istanbuljs/load-nyc-config");
 
 const policyFor = (version) => `## Supported Versions
 
@@ -180,6 +185,30 @@ test("publish workflow supports npm trusted publishing", () => {
   assert.match(publishWorkflow, /actions\/setup-node@v6/);
   assert.match(publishWorkflow, /node-version: 24/);
   assert.match(releaseWorkflow, /name: Validate release metadata/);
+});
+
+test("CI workflow grants the GitHub token only contents read access", () => {
+  const ciWorkflow = readFileSync(".github/workflows/ci.yml", "utf8");
+
+  assert.match(ciWorkflow, /^permissions:\n  contents: read\n\njobs:/m);
+});
+
+test("coverage configuration preserves YAML merge keys", async () => {
+  const directory = mkdtempSync(join(tmpdir(), "nyc-config-"));
+
+  try {
+    writeFileSync(join(directory, "package.json"), "{}");
+    writeFileSync(
+      join(directory, ".nycrc.yml"),
+      "base: &base\n  extension: [.js]\n<<: *base\n",
+    );
+
+    const config = await loadNycConfig({ cwd: directory });
+
+    assert.deepEqual(config.extension, [".js"]);
+  } finally {
+    rmSync(directory, { force: true, recursive: true });
+  }
 });
 
 test("readLockfilePackageVersion requires root and package versions to match", () => {
