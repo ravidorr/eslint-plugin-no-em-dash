@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [1.0.13] - 2026-10-13
+
+### Fixed
+
+- Remove a vulnerable transitive development dependency and restrict CI token permissions.
+
 ## [1.0.12] - 2026-10-11
 
 ### Changed
