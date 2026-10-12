@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [1.0.14] - 2026-10-13
+
+### Changed
+
+- Prepare the 1.0.14 patch release.
+
 ## [1.0.13] - 2026-10-13
 
 ### Fixed
