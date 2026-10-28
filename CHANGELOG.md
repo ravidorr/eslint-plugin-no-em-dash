@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [1.0.15] - 2026-10-28
+
+### Fixed
+
+- Update dev dependencies `ajv` and `yaml` to resolve `npm audit` vulnerabilities.
+
 ## [1.0.14] - 2026-10-13
 
 ### Changed
